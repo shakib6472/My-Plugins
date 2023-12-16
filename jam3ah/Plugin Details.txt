@@ -1,0 +1,1 @@
+This plugin is created for Advanced Custom Functionality. Its extended the Tutor LMS functions. aswell also Created some Brand New Custom features
