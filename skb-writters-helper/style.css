@@ -1,0 +1,159 @@
+.book-preview {
+  border-radius: 9px;
+}
+.book-preview .rating, .book-preview .image{
+ background-color: #ffffff;
+}
+
+p.mb-0.text-center {
+  background-color: #cee3e7;
+  padding: 5px 8px 5px 8px;
+  border-style: none;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.bookbox .image {
+  overflow: hidden;
+}
+.bookbox .image img {
+  position: relative;
+  width: 100%;
+  transition: 0.7s;
+  z-index: 10;
+}
+.bookbox .view-button .button-box {
+  text-align: center;
+  position: relative;
+  background-color: #1f646d;
+  padding: 10px;
+  color: #ffffff;
+  z-index: 111;
+  transition: all 0.5s ease;
+  transform: translateY(130%);
+  visibility: hidden;
+}
+.bookbox .image:hover img {
+  scale: 1.2;
+}
+.bookbox .image:hover .view-button .button-box {
+  visibility: visible;
+  transform: translateY(0);
+
+}
+.bookbox .view-button .button-box a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.bookbox .details {
+  text-align: center;
+  margin-top: 10px;
+}
+.bookbox .details .category h4{
+  color: #598d1b;
+  font-family: "Noto Serif", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+}
+.bookbox .details .title a{
+  color: #051e3a;
+  text-decoration: none;
+  font-family: "Questrial", Sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+.bookbox .details .title a h2{
+  color: #051e3a;
+  text-decoration: none;
+  font-family: "Questrial", Sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+
+}
+
+
+.bookdetailsright .container .row .col-md-12 p.category{
+  color:#598d1b;
+  font-size: 'Noto serif', sans-serif;
+  text-decoration: none;
+  font-style: italic;
+}
+.bookdetailsright .container .row .col-md-12 h4.titel{
+  color: rgb(6, 59, 65);
+  font-size: 'Questrial', sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.bookdetailsright .container .row .col-md-12 .rating.d-flex{
+  color: rgb(6, 59, 65);
+  font-size: 15px;
+}
+.bookdetailsright .container .row .col-md-12 .rating.d-flex i{
+  margin-right: 5px;
+}
+.bookdetailsright .container .row .col-md-12 .rating.d-flex svg{
+  margin-right: 5px;
+}
+.bookdetailsright .container .row .col-md-12 .rating.d-flex i.no-color{
+  color: transparent; /* Transparent star color */
+  border: 1px solid rgb(6, 59, 65);
+}
+.bookdetailsright .container .row .col-md-12 .tabs.d-flex button{
+  color: #1f646d;
+  font-size: 'Questrial', sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: #ffffff;
+  padding: 10px 40px;
+  border: none;
+  border-bottom: 1px solid #1f646d;
+  transition: all 0.1s ease-in;
+}
+.bookdetailsright .container .row .col-md-12 .tabs.d-flex button.active{
+  border-bottom: 3px solid #1f646d;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px;
+}
+
+/* Style the active tab */
+.tabcontent.active {
+  display: block;
+}
+
+.bookdetailsright .container .row .col-md-5.buttons{
+background-color: #1f646d;
+text-align: center;
+text-decoration: none;
+margin: 20px 10px;
+box-shadow: 6px 6px 0px rgb(181,213,219);
+}
+.bookdetailsright .container .row .col-md-5.buttons .icon-box i{
+font-size: 30px;
+}
+.bookdetailsright .container .row .col-md-5.buttons .icon-box .title{
+font-size: 11px;
+text-align: left;
+margin-bottom: -8px;
+padding-top: 10px;
+font-family: 'inter','sans-serif';
+}
+.bookdetailsright .container .row .col-md-5.buttons .icon-box .icon-box-description{
+font-size: 15px;
+text-align: left;
+padding-top: 8px;
+}
+.bookdetailsright .container .row .col-md-5.buttons .icon-box{
+padding-left: 15px;
+font-size: 'Questrial', sans-serif;
+}
+.bookdetailsright .container .row .col-md-5.buttons a{
+text-decoration: none;
+color: white;
+}
