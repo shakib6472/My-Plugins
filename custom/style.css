@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Show vertical scrollbar */
+}
+.mainbox {
+  font-family: "Montserrat", Courier, monospace;
+}
+.mainbox .containers {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mainbox .container .col-md-6 .right-bg {
+  background-color: #ffffff;
+  border: 1;
+  box-shadow: 0 0 10px rgb(157 156 156);
+  border-radius: 13px;
+  height: 100%;
+}
+.mainbox .container .col-md-6 .right-bg .charecher-titel {
+  color: rgb(214, 7, 7);
+  font-size: 36px;
+  font-weight: bold;
+}
+.mainbox .container .col-md-6 .right-bg .child-heading {
+  color: rgb(22, 22, 22);
+  font-size: 24px;
+  font-weight: 600;
+}
+.mainbox .container .col-md-6 .right-bg .child-des {
+  color: rgb(22, 22, 22);
+  font-size: 19px;
+  font-weight: 400;
+}
+.mainbox
+  .container
+  .col-md-6
+  .right-bg
+  .child-items.d-flex.justify-content-between {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 9px;
+  box-shadow: 0 0 10px 0 rgb(81,81,81,0.2);
+
+}
+.mainbox .container.archives {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 10px;
+  border-radius: 9px;
+  box-shadow: 0 0 10px 0 rgb(81,81,81,0.2);
+
+}
+.mainbox .container.archives .col-md-3.text-center {
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  transition: 0.4s;
+}
+.mainbox .container.archives .col-md-3.text-center div {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 12px;
+  border: 1px solid #f8f8f8;
+  transition: 0.4s;
+  box-shadow: 0 0 10px 0 rgb(81,81,81,0.2);
+}
+.mainbox .container.archives .col-md-3.text-center div:hover {
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgb(81,81,81,0.2);
+}
+.mainbox .container.archives .col-md-3.text-center img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.masthead .masthead__wrapper .masthead__hero {
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: transparent;
+}
+
+body .container.details-sec {
+  position: absolute;
+  left: 1%;
+  right: 1%;
+}
+body .container.details-sec.charecter {
+  font-family: "Montserrat", sans-serif, monospace;
+  display: block;
+  padding: 60px 0;
+  transition: transform 1s ease; /* Animation duration and easing */
+  transform: translateX(0); /* Initially off-screen to the left */
+}
+body .container.details-sec.comic {
+  display: none;
+  font-family: "Montserrat", sans-serif, monospace;
+  padding: 60px 0;
+  transition: transform 1.5s ease; /* Animation duration and easing */
+  transform: translateX(-150%); /* Initially off-screen to the left */
+}
+body .container.details-sec.series {
+  display: none;
+  font-family: "Montserrat", sans-serif, monospace;
+  padding: 60px 0;
+  transition: transform 1.5s ease; /* Animation duration and easing */
+  transform: translateX(-300%); /* Initially off-screen to the left */
+}
+body .container.details-sec.stories {
+  display: none;
+  font-family: "Montserrat", sans-serif, monospace;
+  padding: 60px 0;
+  transition: transform 1.5s ease; /* Animation duration and easing */
+  transform: translateX(-450%); /* Initially off-screen to the left */
+}
+body .container.details-sec.events {
+  display: none;
+  font-family: "Montserrat", sans-serif, monospace;
+  padding: 60px 0;
+  transition: transform 1.5s ease; /* Animation duration and easing */
+  transform: translateX(-600%); /* Initially off-screen to the left */
+}
+
+/* body .container.details-sec.show {
+  font-family: "Montserrat", sans-serif, monospace;
+  padding: 60px 0;
+  display: block;
+} */
+body .container.details-sec h4 {
+  font-family: "Montserrat", sans-serif, monospace;
+  font-weight: 600;
+  color: #181818;
+  font-size: 24px;
+}
+body .container.details-sec .row img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.section-holder {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 1.5s ease;
+  height: 600px;
+}
+
+@media (max-width: 767px) {
+  .masthead.subnav .masthead__tabs-wrapper {
+    position: fixed;
+    top: 89vh;
+    left: -24px;
+    height: 76px;
+    width: 427px;
+    display: flex;
+    z-index: 40;
+    flex-direction: row;
+}
+  .masthead .masthead__wrapper .masthead__hero {
+    display: none;
+}
+.masthead__wrapper {
+    display: none;
+}
+}

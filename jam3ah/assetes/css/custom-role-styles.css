@@ -1,0 +1,15 @@
+/* Hide menu items for Tutor Instructor role */
+/* Adjust the selectors as needed */
+li#menu-posts-digital-note,
+li#menu-posts-book,
+li#menu-posts,
+li#menu-posts-wantoed-book,
+li#toplevel_page_registrations-for-the-events-calendar,
+li#menu-media,
+li#menu-posts-eb_header,
+li#menu-posts-eb_footer,
+li#menu-posts-elementor_library,
+li#toplevel_page_wpcf7,
+li#menu-tools {
+    display: none !important;
+}
