@@ -1,0 +1,2 @@
+This PLugin is a Elementor Addon for a FLip box. 
+in visual, It will be look like a card with some information. & then when it will hover, it will fliiped & shown others information which is in tha back of the card. 
