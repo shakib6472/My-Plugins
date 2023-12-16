@@ -1,0 +1,5 @@
+This plugin is a complete website. I just placed the shortcode into the home page. All is done. The shortcode is to create the design & funtionality. 
+Funcitonalities
+  1. User can upload his photo & download a edited photo. 
+  2. user can also put names & text over the photo
+
