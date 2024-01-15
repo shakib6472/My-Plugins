@@ -1,0 +1,74 @@
+body {
+    font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,Verdana,sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #000000;
+}
+
+#tutor-search h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#tutor-search .connect-row {
+    background: none repeat scroll 0 0 #efefef;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px;
+}  
+#tutor-search .tutor-profile-img {
+    border: 1px solid #dedede;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+} 
+.img-responsive, .thumbnail>img, .thumbnail a>img {
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+#tutor-search h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #303030;
+    line-height: 26.4px;
+    margin-top: 20px;
+}
+#tutor-search .connect-now .row {
+    margin-top: 10px;
+}
+textarea.form-control {
+    height: auto;
+}
+#tutor-search .connect-now .row {
+    margin-top: 10px;
+}
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+    width: 100%;
+}
+.col-md-offset-7 {
+    margin-left: 58.33333333%;
+}
+.col-md-offset-7 .btn-primary {
+    color: #fff;
+    background-color: #003f5f;
+    border-color: #003f5f;
+}
+div#GetTutorDiv {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
