@@ -1,15 +1,15 @@
 <?php
-class Elementor_spitznagel_post_slider extends \Elementor\Widget_Base
+class Elementor_spitznagel_post_slider_other_page extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'post-slider';
+        return 'post-slider-other-page';
     } 
 
     public function get_title()
     {
-        return esc_html__('Post SLider', 'spitznagel');
+        return esc_html__('Post SLider Other Page', 'spitznagel');
     }
 
     public function get_icon()
@@ -22,7 +22,7 @@ class Elementor_spitznagel_post_slider extends \Elementor\Widget_Base
         // Get product categories
 
         //adding css & js
-         wp_enqueue_style( 'spitznagel_post_slider_css', plugin_dir_url( __FILE__ ) . 'post-slider.css', [], '1.0.0', 'all' );
+         wp_enqueue_style( 'spitznagel_post-slider-other-page_css', plugin_dir_url( __FILE__ ) . 'post-slider-other-page.css', [], '1.0.0', 'all' );
         // wp_enqueue_script( 'remal-product-grid-script', plugin_dir_url( __FILE__ ) . 'search-tutor.js', [ 'jquery' ], '1.0.0', true );
         // //end Control
     }
@@ -34,7 +34,7 @@ class Elementor_spitznagel_post_slider extends \Elementor\Widget_Base
 
     public function get_keywords()
     {
-        return ['post', 'slider'];
+        return ['post', 'slider', 'other'];
     }
 
     protected function render()
@@ -46,50 +46,11 @@ class Elementor_spitznagel_post_slider extends \Elementor\Widget_Base
 <div class="slider-box">
         <div class="arrow left"></div>
         <div class="slider-container">
-
-    <?php 
-    // Check if there are posts
-        // Get post title
-        $post_title = get_the_title();
-        
-        // Get post description
-        $description = get_post_meta(get_the_ID(), 'lagerlogistik', true);
-        
-        // Get featured image URL
-        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-       //Display the main Design
-       ?> 
-                
-                <div class="slider-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="image-box">
-                                <img src="<?php echo $featured_image_url; ?>" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="headline">
-                                <h3><?php echo $post_title; ?></h3>
-                            </div>
-                            <div class="informations">
-                                <div class="list">
-                                    <?php echo $description; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       
-       <?php 
-
-    
+<?php 
 
     $args = array(
         'post_type' => 'lagerlogistik', // Replace with your custom post type key
         'posts_per_page' => -1, // Set to -1 to retrieve all posts
-        'post__not_in' => array(get_the_ID()), // Exclude post with ID Current Post Id
     );
 
     $all_other_posts = new WP_Query($args);

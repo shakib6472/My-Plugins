@@ -2,7 +2,7 @@
  * Plugin Name:       Spitznagel - Core
  * Plugin URI:        https://facebook.com/shakib6472/
  * Description:       This is the spitznagel websites Custom Plugin. All features are came from here.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Shakib Shown
@@ -39,9 +39,13 @@ function elementor_spitznagel_core_adding($widgets_manager)
 {
 
     require_once(__DIR__ . '/widgets/post-slider/post-slider.php');
+    require_once(__DIR__ . '/widgets/news-arcive/news-arcive.php');
+    require_once(__DIR__ . '/widgets/post-slider-other-page/post-slider-other-page.php');
 
 
     $widgets_manager->register(new \Elementor_spitznagel_post_slider());
+    $widgets_manager->register(new \Elementor_spitznagel_post_slider_other_page());
+    $widgets_manager->register(new \Elementor_spitznagel_news_arcive());
 }
 add_action('elementor/widgets/register', 'elementor_spitznagel_core_adding');
 
