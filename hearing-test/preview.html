@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'
+        integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+    <script src='https://kit.fontawesome.com/46882cce5e.js' crossorigin='anonymous'></script>
+
+    <style>
+        .monitization-mode .monitization p {
+            background-color: #dcfce7;
+            padding: 2px 10px;
+            border: 1px solid #22c55e;
+            border-radius: 50px;
+
+        }
+
+        .answer-box .answer-input {
+            padding: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .answer-box .answer-input:focus {
+            border: none;
+            outline: none;
+        }
+
+        .answer-box .submit {
+            border: none;
+            padding: 5px 20px;
+            background-color: #125a2c;
+            border-radius: 9px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            transition: all 0.4s;
+        }
+
+        .answer-box .submit:hover {
+            border: none;
+            padding: 5px 20px;
+            background-color: #5be48d;
+            border-radius: 9px;
+            color: #000000;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .lds-grid,
+        .lds-grid div {
+            box-sizing: border-box;
+        }
+
+        .lds-grid {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-grid div {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: lds-grid 1.2s linear infinite;
+        }
+
+        .lds-grid div:nth-child(1) {
+            top: 8px;
+            left: 8px;
+            animation-delay: 0s;
+        }
+
+        .lds-grid div:nth-child(2) {
+            top: 8px;
+            left: 32px;
+            animation-delay: -0.4s;
+        }
+
+        .lds-grid div:nth-child(3) {
+            top: 8px;
+            left: 56px;
+            animation-delay: -0.8s;
+        }
+
+        .lds-grid div:nth-child(4) {
+            top: 32px;
+            left: 8px;
+            animation-delay: -0.4s;
+        }
+
+        .lds-grid div:nth-child(5) {
+            top: 32px;
+            left: 32px;
+            animation-delay: -0.8s;
+        }
+
+        .lds-grid div:nth-child(6) {
+            top: 32px;
+            left: 56px;
+            animation-delay: -1.2s;
+        }
+
+        .lds-grid div:nth-child(7) {
+            top: 56px;
+            left: 8px;
+            animation-delay: -0.8s;
+        }
+
+        .lds-grid div:nth-child(8) {
+            top: 56px;
+            left: 32px;
+            animation-delay: -1.2s;
+        }
+
+        .lds-grid div:nth-child(9) {
+            top: 56px;
+            left: 56px;
+            animation-delay: -1.6s;
+        }
+
+        @keyframes lds-grid {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .loader-box {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffffd8;
+            z-index: 500;
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container d-flex vh-100 justify-content-center align-items-center flex-column">
+        <!-- Loader -->
+        <div class="loader-box">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Loader -->
+
+
+
+        <!-- First Row -->
+        <div class="row monitization-mode">
+            <div class="d-flex align-items-center gap-3">
+                <div class="monitization">
+                    <p class="m-0">Memorization mode</p>
+                </div>
+                <div class="mode">
+                    <p class="m-0"># One</p>
+                </div>
+            </div>
+        </div>
+        <!-- Second Row Audio-->
+        <div class="row w-100 mt-3">
+            <div class="form-control">
+                <div class="p-0 w-100">
+                    <audio class="w-100 position-relative" controls autoplay
+                        src="http://localhost/hearing-test/wp-content/uploads/2024/08/can-you-imagine-that-how-big-is-space-172166.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        <!-- Third Row Answer Row -->
+        <div class="row mt-3 w-100">
+            <div class="answer-box p-2 d-flex form-control">
+                <input type="text" class="w-100 answer-input" placeholder="Write What You hear">
+                <input type="submit" class="answer submit" value="Submit" data-postid="1245">
+            </div>
+            <p class="result m-0"></p>
+            <p class="right-answer m-0"></p>
+            <p class="error text-danger m-0"></p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.answer.submit').click(function (e) {
+                e.preventDefault();
+                $('.loader-box').css('visibility', 'visible');
+                var inputedAnswer = $('.answer-input').val().trim();
+                var actualAnswer = 'Can You Imagine That How Big is Space Yeah';
+                var $result = $('p.result');
+
+                // Clear previous results
+                $result.empty();
+
+                if (inputedAnswer !== '') {
+                    console.log(inputedAnswer);
+                    $('p.error').text('');
+                    // Split answers into arrays of words
+                    var inputWords = inputedAnswer.split(' ');
+                    var actualWords = actualAnswer.split(' ');
+
+                    // Iterate over each word and compare
+                    for (var i = 0; i < inputWords.length; i++) {
+                        var word = inputWords[i].toLowerCase(); // Convert input word to lowercase
+                        var actualWord = actualWords[i] ? actualWords[i].toLowerCase() : ''; // Convert actual word to lowercase
+
+                        // Create a span element for each word
+                        var $span = $('<span>').text(inputWords[i] + ' ');
+
+                        // Check if the word matches the actual answer
+                        if (word === actualWord) {
+                            $span.addClass('text-success');
+                        } else {
+                            $span.addClass('text-danger');
+                        }
+
+                        // Append the span to the result paragraph
+                        $result.append($span);
+                    }
+
+                    // Optionally display the actual correct answer
+                    $('p.right-answer').text('The Right Answer is: '.actualAnswer);
+                    $('.loader-box').css('visibility', 'hidden');
+                } else {
+                    $('.loader-box').css('visibility', 'hidden');
+                    console.log('Empty');
+                    $('p.error').text('Please Entere Your Answer First');
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+
+</html>

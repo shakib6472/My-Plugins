@@ -1,0 +1,259 @@
+
+.monitization-mode .monitization p {
+    background-color: #dcfce7;
+    padding: 2px 10px;
+    border: 1px solid #22c55e;
+    border-radius: 50px;
+}
+.monitization-mode  p.total-points {
+    background-color: #dcfce7;
+    padding: 2px 10px;
+    border: 1px solid #22c55e;
+    border-radius: 50px;
+}
+.monitization-mode  p.this-points {
+    background-color: #39d0eb96;
+    padding: 2px 10px;
+    border: 1px solid #2284c5;
+    border-radius: 50px;
+}
+
+.monitization-mode  .question-type {
+    display: inline;
+    padding: 2px 10px;
+    border: 1px solid #2284c5;
+    border-radius: 50px;
+}
+
+.answer-box .answer-input {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.answer-box .answer-input:focus {
+    border: none;
+    outline: none;
+}
+
+.answer-box .submit {
+    border: none;
+    padding: 5px 20px;
+    background-color: #125a2c;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.result.next {
+    background-color: #baf7d0;
+    padding: 8px;
+    border: none;
+    color: #1f1f1f;
+    border-radius: 9px;
+    margin: 9px 0;
+}
+.result.next span{
+    color: #ff0000;
+}
+.right-answer.next {
+    background-color: #1a6636;
+    padding: 8px;
+    border: none;
+    color: #fff;
+    border-radius: 9px;
+}
+
+.answer-box .submit:hover {
+    border: none;
+    padding: 5px 20px;
+    background-color: #5be48d;
+    border-radius: 9px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.lds-grid,
+.lds-grid div {
+    box-sizing: border-box;
+}
+
+.lds-grid {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loader-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffd8;
+    z-index: 500;
+    visibility: visible;
+}
+
+/* Book Mark Level */
+
+button.dropdown-toggle {
+    width: auto;
+    padding: 7px 7px 7px 3px;
+    gap: 9px;
+    border-radius: 5px;
+}
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-toggle {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.dropdown-toggle i {
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50px !important;
+}
+
+.dropdown-item {
+    padding: 10px;
+    width: 30px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+}
+
+.option-1 {
+    color: #3498db;
+}
+
+.option-2 {
+    color: #e74c3c;
+}
+
+.option-3 {
+    color: #f1c40f;
+}
+
+.option-4 {
+    color: #9b59b6;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
