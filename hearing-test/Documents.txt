@@ -1,0 +1,7 @@
+This is a wordpress plugin. 
+Functionalities =
+1. It's a hearing test plugin. The learners can hear a voice and they can input what they hear. Our system will recognize is it correct input or not. 
+2. Based on correct answer user will get point
+3. Admin can see all the users
+4. Admin can set additional answers also
+5. And there a lot of more benefits
