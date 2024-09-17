@@ -1,0 +1,133 @@
+.check {
+    display: flex;
+}
+
+.loop-main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.loop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-position: center;
+    background-size: cover;
+    height: 280px;
+}
+
+.loop-play-icon {
+    color: #fff;
+    font-size: 50px;
+}
+
+.loop-lesson {
+    color: #fff;
+    margin: 0px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.loop-main-heading {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    margin: 0px;
+    margin-top: 15px;
+    max-width: 88%;
+    padding: 14px;
+    font-size: 20px;
+}
+
+.loop-pera {
+    text-align: center;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gridbox .item {
+    border: 1px solid #efefef;
+    border-radius: 13px;
+    box-shadow: 0px 0px 15px 0 #000d0f69;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.gridbox .item a{
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.gridbox .item div{
+    transition: all 0.4s;
+}
+.gridbox .item div:hover{
+    scale: 1.1;
+}
+
+.non-purchase {
+    padding: 35px;
+
+}
+
+
+
+
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.pre-loader {
+    position: fixed;
+    background-color: #00000090;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
